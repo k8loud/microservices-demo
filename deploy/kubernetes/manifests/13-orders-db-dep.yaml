@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: orders-db
-        image: mongo:4.4.18
+        image: quay.io/ibmmas/mongo:4.4.18
         ports:
         - name: mongo
           containerPort: 27017

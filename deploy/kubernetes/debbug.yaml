@@ -5,9 +5,11 @@ metadata:
 spec:
   containers:
     - name: debug
-      image: alpine/mongosh
-      command: []
+      image: docker.io/tutum/dnsutils
       ports:
         - name: web
           containerPort: 80
           protocol: TCP
+
+
+# TODO automatic flannel deployment + "sudo ip link delete cni0 type bridge" on workers + coredns restart
