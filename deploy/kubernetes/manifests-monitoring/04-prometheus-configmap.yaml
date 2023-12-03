@@ -163,3 +163,7 @@ data:
       - source_labels: [__meta_kubernetes_endpoints_name]
         regex: 'node-exporter'
         action: keep
+    - job_name: 'demo-app'
+      static_configs:
+        - targets: ['demo-app-service.demo-app.svc:80']
+      metrics_path: /actuator/prometheus
